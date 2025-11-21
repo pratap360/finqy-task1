@@ -1,35 +1,31 @@
-<nav class="navbar navbar-expand-lg bg-body-tertiary">
-  <div class="container-fluid">
-    <img src="q-logo.svg" alt="logo">
-    <a class="navbar-brand" href="#"></a>
-    <button
-      class="navbar-toggler"
-      type="button"
-      data-bs-toggle="collapse"
-      data-bs-target="#navbarNav"
-      aria-controls="navbarNav"
-      aria-expanded="false"
-      aria-label="Toggle navigation"
-    >
+<nav class="navbar navbar-expand-lg navbar-light bg-white sticky-top shadow-sm">
+  <div class="container-fluid px-4">
+    <div class="d-flex align-items-center">
+      <img src="q-logo.svg" alt="Q Band Logo" class="logo me-2">
+    </div>
+    <button 
+      class="navbar-toggler border-0" 
+      type="button" 
+      (click)="isMenuCollapsed = !isMenuCollapsed"
+      [attr.aria-expanded]="!isMenuCollapsed">
       <span class="navbar-toggler-icon"></span>
     </button>
-    <div class="collapse navbar-collapse" id="navbarNav">
-      <ul class="navbar-nav">
+    <div class="collapse navbar-collapse" [ngbCollapse]="isMenuCollapsed">
+      <ul class="navbar-nav ms-auto">
         <li class="nav-item">
-          <a class="nav-link active" aria-current="page" href="#">Home</a>
+          <a class="nav-link text-danger fw-semibold" href="#">Home</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#">What people say</a>
+          <a class="nav-link text-muted" href="#">What People Say</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#">How Q works</a>
-        </li>
-
-        <li class="nav-item">
-          <a class="nav-link" href="#">Insight</a>
+          <a class="nav-link text-muted" href="#">How Q Works</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#">FAQ</a>
+          <a class="nav-link text-muted" href="#">Insights</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link text-muted" href="#">FAQ's</a>
         </li>
       </ul>
     </div>
@@ -37,6 +33,12 @@
 </nav>
 
 <div class="marquee">
-    <p class="text1"> World's 1st AI Based Personal Finance Manager!</p>
-    <p class="text2">Free Experian Report</p>
+  <div class="marquee-content">
+    <span class="marquee-text">World's 1st AI Based Personal Finance Manager!</span>
+    <span class="marquee-text">FREE Credit Card Protector Plan!</span>
+    <span class="marquee-text">Free Experian Report</span>
+    <span class="marquee-text">World's 1st AI Based Personal Finance Manager!</span>
+    <span class="marquee-text">FREE Credit Card Protector Plan!</span>
+    <span class="marquee-text">Free Experian Report</span>
+  </div>
 </div>
